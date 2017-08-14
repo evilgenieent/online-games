@@ -1,0 +1,172 @@
+<script>
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "Covert";
+answers[1] = "Allegory";
+answers[2] = "Becoming";
+answers[3] = "Florid";
+answers[4] = "Exegesis";
+answers[5] = "Pinguid";
+answers[6] = "Invidious";
+answers[7] = "Hallux";
+answers[8] = "Exhaustive";
+answers[9] = "Scapegoat";
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+<HTML>
+<head>
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+<style>
+ .container {
+    overflow: auto;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+</style>
+</head>
+
+  <body>
+<header>
+<nav>
+<ul>
+<li><a href  ="../welcome.php">HOME</a></li>
+<li><a href ="../games.html">GAMES</a></li>
+<li><a href = "../vocabularies/vocabulary1.html">QUICK QUIZ</a></li>
+<li><a href = "http://www.riarauniversity.ac.ke/rublog/">NEWS</a></li>
+
+</ul>
+</nav>
+</header>
+
+</body>
+<center>
+<h1>Vocabulary test!</h1>
+<h2>TEST 1</h2>
+<p>
+<form name="quiz">
+<p>
+<b>1. Secret in nature?<br></b>
+<blockquote>
+<input type="radio" name="q1" value="Covert">Covert<br>
+<input type="radio" name="q" value="Wary">Wary<br>
+<input type="radio" name="q" value="Esurient">Esurient<br>
+<input type="radio" name="q" value="Blithe">Blithe<br>
+</blockquote>
+<p><b>
+2. A symbolic story?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Reverence">Reverence<br>
+<input type="radio" name="q" value="Objective">Objective<br>
+<input type="radio" name="q2" value="Allegory">Allegory<br>
+<input type="radio" name="q" value="Labyrinth">Labyrinth<br>
+</blockquote>
+<p><b>
+3. Flattering in appearance?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Lackluster">Lackluster<br>
+<input type="radio" name="q" value="Vague">Vague<br>
+<input type="radio" name="q" value="Humble">Humble<br>
+<input type="radio" name="q3" value="Becoming">Becoming<br>
+</blockquote>
+<p><b>
+4. Excessively embellished?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Evocative">Evocative<br>
+<input type="radio" name="q" value="Tentative">Tentative<br>
+<input type="radio" name="q" value="Trivial">Trivial<br>
+<input type="radio" name="q4" value="Florid">Florid<br>
+</blockquote>
+<p><b>
+5. An explanation of a text?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Sticker">Sticker<br>
+<input type="radio" name="q5" value="Exegesis">Exegesis<br>
+<input type="radio" name="q" value="Bugaboo">Bugaboo<br>
+<input type="radio" name="q" value="Jambeau">Jambeau<br>
+</blockquote>
+<p><b>
+6. Fatty, oily, or greasy?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Prudent">Prudent<br>
+<input type="radio" name="q" value="Evanescent">Evanescent<br>
+<input type="radio" name="q6" value="Pinguid">Pinguid<br>
+<input type="radio" name="q" value="Extenuating">Extenuating<br>
+</blockquote>
+<p><b>
+7. Likely to cause anger or resentment?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Dapper">Dapper<br>
+<input type="radio" name="q" value="Indubitably">Indubitably<br>
+<input type="radio" name="q" value="Emotional">Emotional<br>
+<input type="radio" name="q7" value="Invidious">Invidious<br>
+</blockquote>
+<p><b>
+8. A primate's big toe?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Nadir">Nadir<br>
+<input type="radio" name="q8" value="Hallux">Hallux<br>
+<input type="radio" name="q" value="Porridge">Porridge<br>
+<input type="radio" name="q" value="Impetus">Impetus<br>
+</blockquote>
+<p><b>
+9. Very thorough?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Becoming">Becoming<br>
+<input type="radio" name="q" value="Capacious">Capacious<br>
+<input type="radio" name="q" value="Ribald">Ribald<br>
+<input type="radio" name="q9" value="Exhaustive">Exhaustive<br>
+</blockquote>
+<p><b>
+10. A person who is unfairly blamed?<br></b>
+<blockquote>
+<input type="radio" name="q" value="Revenant">Revenant<br>
+<input type="radio" name="q" value="Squabble">Squabble<br>
+<input type="radio" name="q" value="Personality">Personality<br>
+<input type="radio" name="q10" value="Scapegoat">Scapegoat<br>
+</blockquote>
+<p><b>
+
+<input type="button" value="Get score" onClick="getScore(this.form)">
+<input type="reset" value="Clear"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Correct answers:<br></font>
+<textarea name="solutions" wrap="virtual" rows="4" cols="25"></textarea>
+</form>
+</p>
+ <button type="submit" class="container"><a href = "vocabulary2.html">Next Quiz</a></button>
+
+ <button class="container"><a href = "../games.html">More Games</a></button>

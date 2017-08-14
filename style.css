@@ -1,0 +1,106 @@
+body,li,ul{ 
+ margin:0px  auto;
+}
+body{
+	 background: red; /* For browsers that do not support gradients */
+     background: -webkit-linear-gradient(left top,pink,white ); /* For Safari 5.1 to 6.0 */
+     background: -o-linear-gradient(bottom right, purple, white); /* For Opera 11.1 to 12.0 */
+     background: -moz-linear-gradient(bottom right, pink, pink); /* For Firefox 3.6 to 15 */
+     background: linear-gradient(to bottom right, white, purple); /* Standard syntax */
+	 width:100%;  height:auto;  margin:0px;  float:auto;    border-top:5px;
+}
+header{
+	background-color:#fff;  width:97.5%;  height:55px;  margin:0px;
+}
+nav{
+	width:100%; border-top:5px  solid  #3498DB;
+}
+nav  ul{
+	float:left;  border-left:6px  solid  #BDC3C7;    height:50px;  
+}
+nav  li{
+	list-style:none;  font-size:30px;  font-weight:bold;  padding-right:10px;  padding-left:10px;  border-right:1px  solid  #BDC3C7;  width:auto;  font-family:Gabriola;
+color:#3498DB;  float:left;  height:50px; 
+}
+nav  li:hover{
+	color:#fff;background-color:#3498DB;  transition:1s;
+}
+nav a{text-decoration: none;
+}
+#center{
+	margin:0px  auto;  width:95%;
+}
+#center-set{
+	float:left;    width:100%;  padding-top:1%;  padding-bottom:0.5%;    border-top:5px; background-color:white;
+}
+#signup{
+	  width:50%;
+}
+#signup-st,#login-st{
+	background-color:#880E4F;  margin:0px auto;    border-radius:20px;  -webkit-box-shadow:  3px  3px  4px  0px  rgba(0,0,0,0.85);
+}
+#reg{
+	padding-top:10px;
+}
+#reg-head,#reg-bottom,#reg-head-fail{
+	width:100%;  text-align:center;  background-color:#BDBDBD;  font-weight:bold;
+}
+.headrg{
+	border-top-left-radius:20px;  border-top-right-radius:20px;padding-top:12px;  padding-bottom:12px;font-size:22px;  color:#6C7A89;
+}
+.btmrg{
+	padding-top:5px;  padding-bottom:5px;    border-bottom-left-radius:20px;border-bottom-right-radius:20px;font-size:18px;  color:#22313F;
+}
+#reg-head-fail{
+	color:#D35400;
+}
+#reg-head:hover{
+	color:#3498DB;transition:1s;
+}
+#tb-name{
+	float:right;  font-size:20px;
+}
+#tb-box{
+	height:22px;  width:200px;
+}
+#st{
+	width:100%;  text-align:center;  padding-top:30px;  padding-bottom:10px;
+}
+#st-btn{ 
+	text-align:center;  padding:10px  21px  10px  21px;  background-color:#3498DB;  border:none;color:#fff;  cursor:pointer;  font-size:20px;  font-weight:bold;
+}
+#st-btn:hover{
+	color:#3498DB;  background:#fff;transition:1s;
+}
+td.t-1{
+	float:left;  width:44%;  text-align:right;  color:#C5EFF7;
+}
+td.t-2{
+	float:right;  width:55%;
+}
+#lg-1{
+	padding:10px;  float:left;  width:95%;
+}
+.tl-1{
+	float:left;width:40%;padding-right:5%;  text-align:center;  color:#C5EFF7;
+}
+.tl-4{
+	font-size:17px;  font-weight:bold;  text-align:center;  color:#FDE3A7;
+}
+#login{
+	  width:50%;
+}
+#login-sg{
+	margin-top:20%;
+}
+#riara{
+	 background: red; /* For browsers that do not support gradients */
+     background: -webkit-linear-gradient(left top,pink,white ); /* For Safari 5.1 to 6.0 */
+     background: -o-linear-gradient(bottom right, purple, white); /* For Opera 11.1 to 12.0 */
+     background: -moz-linear-gradient(bottom right, pink, pink); /* For Firefox 3.6 to 15 */
+     background: linear-gradient(to bottom right, white, purple); /* Standard syntax */
+	 width:100%;  height:auto;  margin:0px;  float:auto;    border-top:5px;
+}
+#riara  p{
+	text-align:center;  font-size:20px;  font-weight:bold;  color:black;
+}

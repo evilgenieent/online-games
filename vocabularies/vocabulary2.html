@@ -1,0 +1,175 @@
+<script>
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "Couscous";
+answers[1] = "Callow";
+answers[2] = "Cantankerous";
+answers[3] = "Stalwart";
+answers[4] = "Vicarious";
+answers[5] = "Hoi polloi";
+answers[6] = "Blight";
+answers[7] = "Restrained";
+answers[8] = "Haughty";
+answers[9] = "Prerogative";
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+<HTML>
+<head>
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+  <style>
+ .container {
+    overflow: auto;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+}
+</style>
+</head>
+
+
+  <body>
+<header>
+<nav>
+<ul>
+<li><a href  ="../welcome.php">HOME</a></li>
+<li><a href ="../games.html">GAMES</a></li>
+<li><a href = "../vocabularies/vocabulary1.html">QUICK QUIZ</a></li>
+<li><a href = "http://www.riarauniversity.ac.ke/rublog/">NEWS</a></li>
+
+</ul>
+</nav>
+</header>
+
+</body>
+
+
+<center>
+<h1>Vocabulary test!</h1>
+<h2>TEST 2</h2>
+<p>
+<form name="quiz">
+<p>
+<b>1. A north African grain?<br></b>
+<blockquote>
+<input type="radio" name="q2" value="Predecessor">Predecessor<br>
+<input type="radio" name="q3" value="Clairvoyant">Clairvoyant<br>
+<input type="radio" name="q4" value="Bucket">Bucket<br>
+<input type="radio" name="q1" value="Couscous">Couscous<br>
+</blockquote>
+<p><b>
+2. Immature?<br></b>
+<blockquote>
+<input type="radio" name="b2" value="Callow">Callow<br>
+<input type="radio" name="b3" value="Affable">Affable<br>
+<input type="radio" name="b4" value="Impious">Impious<br>
+<input type="radio" name="b5" value="Nefarious">Nefarious<br>
+</blockquote>
+<p><b>
+3. Ill-tempered or argumentative?<br></b>
+<blockquote>
+<input type="radio" name="c3" value="Cantankerous">Cantankerous<br>
+<input type="radio" name="c5" value="Hoary">Hoary<br>
+<input type="radio" name="c6" value="Reticent">Reticent<br>
+<input type="radio" name="c7" value="Enchanting">Enchanting<br>
+</blockquote>
+<p><b>
+4. Loyal, reliable, and strong?<br></b>
+<blockquote>
+<input type="radio" name="e1" value="Tenuous">Tenuous<br>
+<input type="radio" name="e2" value="Stalwart">Stalwart<br>
+<input type="radio" name="e3" value="Obscured">Obscured<br>
+<input type="radio" name="e4" value="Contemporary">Contemporary<br>
+</blockquote>
+<p><b>
+5. Exprience through the action of another person?<br></b>
+<blockquote>
+<input type="radio" name="d1" value="Lackluster">Lackluster<br>
+<input type="radio" name="d2" value="Rhetorical">Rhetorical<br>
+<input type="radio" name="d3" value="Redolent">Redolent<br>
+<input type="radio" name="d4" value="Vicarious">Vicarious<br>
+</blockquote>
+<p><b>
+6. common people ?<br></b>
+<blockquote>
+<input type="radio" name="t1" value="Din">Din<br>
+<input type="radio" name="t2" value="Hoi polloi">Hoi polloi<br>
+<input type="radio" name="t3" value="Pool">Pool<br>
+<input type="radio" name="t4" value="Altruism">Altruism<br>
+</blockquote>
+<p><b>
+7. A disease that makes plants dry up and die?<br></b>
+<blockquote>
+<input type="radio" name="h1" value="Blight">Blight<br>
+<input type="radio" name="h2" value="Jubilation">Jubilation<br>
+<input type="radio" name="h3" value="Jerboa">Jerboa<br>
+<input type="radio" name="h4" value="Squab">Squab<br>
+</blockquote>
+<p><b>
+8. Careful and firm moderation?<br></b>
+<blockquote>
+<input type="radio" name="j1" value="Restrained">Restrained<br>
+<input type="radio" name="j2" value="Bonny">Bonny<br>
+<input type="radio" name="j3" value="Indubitably">Indubitably<br>
+<input type="radio" name="j4" value="Nonchalant">Nonchalant<br>
+</blockquote>
+<p><b>
+9. Displaying arrogant superiority?<br></b>
+<blockquote>
+<input type="radio" name="k1" value="Exasperated">Exasperated<br>
+<input type="radio" name="k2" value="Oleaginous">Oleaginous<br>
+<input type="radio" name="k3" value="Haughty">Haughty<br>
+<input type="radio" name="k4" value="Aloof">Aloof<br>
+</blockquote>
+<p><b>
+10. A right or privilege?<br></b>
+<blockquote>
+<input type="radio" name="l1" value="Truck">Truck<br>
+<input type="radio" name="l2" value="Libertine">Libertine<br>
+<input type="radio" name="ql3" value="Jetsam">Jetsam<br>
+<input type="radio" name="l4" value="Prerogative">Prerogative<br>
+</blockquote>
+<p><b>
+
+<input type="button" value="Get score" onClick="getScore(this.form)">
+<input type="reset" value="Clear"><p>
+Score = <input type=text size=15 name="percentage"><br>
+Correct answers:<br></font>
+<textarea name="solutions" wrap="virtual" rows="4" cols="25"></textarea>
+</form>
+<p>
+<button class="container"><a href = "vocabulary1.html">Previous</a></button>
+<button class="container"><a href = "../games.html">More Games</a></button>
